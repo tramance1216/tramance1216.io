@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 
 .section { /*縦書きにする場合*/
  -webkit-writing-mode: vertical-rl;
@@ -5,7 +8,39 @@
  writing-mode: vertical-rl;
 }
 
-.top-txt{
+.container{ /*背景の全体の幅を一括制御*/
+  max-width:1170px;
+  width:100%;
+  margin: 0 auto;
+}
+
+.head-wrapper{  /*ヘッダーの背景*/
+  position: fixed;
+  top:0;
+  z-index:10;
+  width:100%;
+  height: 60px;
+  background-color: #4CB5F5;
+}
+
+.logo{/*現状のロゴっぽいものの制御ヘッダーとフッターに利用*/
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 30px;
+  line-height: 60px;
+  padding-left:20px;
+  float:left;
+  color:white;
+  font-weight: bold;
+}
+
+.top-wrapper{ /*一番上の背景*/
+  margin-top:60px;
+  height:600px;
+  background-image: url("top-wrapper.jpg");
+  background-size:cover;
+}
+
+.top-txt{ /*そうだ旅に出ようのボックス*/
   font-family: 'Noto Sans JP', sans-serif;
   width:100%;
   height: 540px;
@@ -16,78 +51,57 @@
   font-size:60px;
 }
 
-.top-txt1{
+.top-txt1{ /*top-txtでしてある*/
   position: absolute;
 }
 
-.top-txt2{
+.top-txt2{ /*必要な分だけずらした*/
   position: absolute;
   top:120px;
   right:120px;
 }
 
-.head-wrapper{
-  width:100%;
-  height: 60px;
-  background-color: #4CB5F5;
-  opacity: 0.6;
-}
-
-.container{
-  max-width:1170px;
-  width:100%;
-  margin: 0 auto;
-}
-
-.head-left p,footer p {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 30px;
-  line-height: 60px;
-  float:left;
-  color:white;
-  font-weight: bold;
-}
-
-.top-wrapper{
-  height:600px;
-  background-image: url("top-wrapper.jpg");
-  background-size:cover;
-}
-
 .plan-wrapper{
-  background-color:rgba(179,193,0,0.6);
+  background-color:#FBFBF6;
   padding-bottom: 50px;
 }
 
-.heading{
+.heading{ /*見出し*/
   width:100%;
   text-align:center;
 }
 
-.heading h2{
+h2{ /*見出し*/
   font-family: 'Noto Sans JP', sans-serif;
   padding-top: 50px;
   padding-bottom: 20px;
-  font-size:30px;
+  font-size:25px;
   font-weight: bold;
 }
 
 .plan{
+  text-align: center;
+}
+
+.plan ul{ /*箇条書きの全体調整*/
   padding-right: 30px;
-  margin: 0 auto;
   display: inline-block;
   text-align: left;
   font-size: 30px;
   line-height: 70px;
 }
 
-.heading li{
+.plan li{ /*フォントの設定*/
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-footer {
+.make {
+  font-size:20px;
+}
+
+footer {/*フッターの設定*/
   background-color:#4CB5F5;
   opacity: 0.6;
   height:60px;
-  width:100%
+  width:100%;
 }
